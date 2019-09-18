@@ -1,12 +1,15 @@
 <% if logged_in? %>
-  <p>ログイン完了ユーザ: <%= current_user.name %></p>
-<% else %>
-<div class="jumbotron">
-  <div class="text-center">
-    <h1 class='mb-5'>necolog</h1>
-    <p><%= link_to '新規登録', signup_path , class: 'btn btn-info btn'%></p>
-    <p><%= link_to 'ログイン', login_path , class: 'btn btn-info btn'%></p>
-    
+  <div class="row">
+    <div class="col-sm-8">
+      <%= render 'posts/posts', posts: @posts %>
+    </div>
   </div>
-</div>
+<% else %>
+  <div class="jumbotron">
+    <div class="text-center">
+      <h1 class='mb-5'>necolog</h1>
+      <p><%= link_to '新規登録', signup_path , class: 'btn btn-info btn'%></p>
+      <p><%= link_to 'ログイン', login_path , class: 'btn btn-info btn'%></p>
+    </div>
+  </div>
 <% end %>
