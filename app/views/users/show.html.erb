@@ -1,14 +1,33 @@
-<div class="row">
-  <aside class="col-sm-4">
-    <div class="card">
-      <div class="card-header">
-        <h3 class="card-title"><%= @user.name %></h3>
-      </div>
-      <div class="card-body">
-        <img class="rounded img-fluid" src="" alt="">
+<div class="containar">
+  <div class="row">
+    <div class="col-sm-3">
+      <% if @user.image? %>
+        <%= image_tag @user.image.url, class:"mr-2 rounded-circle",size:"200x200" %> 
+      <% else %>
+        <%= image_tag "noimage.png", class:"mr-2", size:"200x200"%>
+      <% end %>
+    </div>
+    <div class="col-sm-3 center">
+      <div class="box2">
+        <p>ユーザー名</p>
+        <p><%= @user.name %></p>
       </div>
     </div>
-  </aside>
-  <%= render 'posts/posts', posts: @posts %>
+    <div class="col-sm-3">
+      <div class="box2">
+        <p>投稿数</p>
+        <p><%= @count_posts %></p>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="box2">
+        <p>いいね数</p>
+        <p><%= @count_likes %></p>
+      </div>
+    </div>
+  </div>
 
+  <div class="row mt-5">
+    <%= render 'posts/posts', posts: @posts %>
+  </div>
 </div>

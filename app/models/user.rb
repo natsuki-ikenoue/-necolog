@@ -12,7 +12,7 @@ class User < ApplicationRecord
   
   #お気に入り
   has_many :favorites
-  has_many :likes, through: :favorites, source: :post
+  has_many :likes, through: :favorites, source: :post, dependent: :destroy
   
   def favorite(post)
     favorites.find_or_create_by(post_id: post.id)
