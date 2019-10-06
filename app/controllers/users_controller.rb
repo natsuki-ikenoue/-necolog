@@ -10,9 +10,9 @@ class UsersController < ApplicationController
     @posts = @user.posts.order(id: :desc).page(params[:page])
     counts(@user)
     
-    @post = Post.find(params[:id])
-    @messages = @post.messages
-    @message = Message.new
+    # @post = Post.find(params[:id])
+    # @messages = @post.messages
+    # @message = Message.new
   end
 
   def new
