@@ -1,7 +1,3 @@
-// Place all the styles related to the favorites controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
 .btn-stitch {
   display: inline-block;
   padding: 0.5em 1em;
@@ -10,12 +6,10 @@
   color: #FFF;
   border-radius: 4px;
   box-shadow: 0px 0px 0px 5px #668ad8;
-  border: dashed 1px #FFF;
-}
+  border: dashed 1px #FFF; }
 
 .btn-stitch2:hover {
-  border: dotted 1px #FFF;
-}
+  border: dotted 1px #FFF; }
 
 .btn-stitch2 {
   display: inline-block;
@@ -25,10 +19,9 @@
   color: #FFF;
   border-radius: 4px;
   box-shadow: 0px 0px 0px 5px #AAAAAA;
-  border: dashed 1px #FFF;
-}
+  border: dashed 1px #FFF; }
 
 .btn-stitch:hover {
-  border: dotted 1px #FFF;
-}
+  border: dotted 1px #FFF; }
 
+/*# sourceMappingURL=favorites.css.map */

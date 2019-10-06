@@ -1,8 +1,6 @@
 <% if logged_in? %>
   <div class="row">
-    <div class="col-sm-8">
       <%= render 'posts/posts', posts: @posts %>
-    </div>
   </div>
 <% else %>
   <div class="jumbotron">
