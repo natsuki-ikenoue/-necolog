@@ -5,4 +5,5 @@ class ToppagesController < ApplicationController
       @posts = Post.all.order(id: :desc).page(params[:page])
     end
   end
+
 end

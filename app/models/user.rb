@@ -9,6 +9,8 @@ class User < ApplicationRecord
   mount_uploader :image, ImageUploader
   
   has_many :posts
+  #コメント
+  has_many :messages
   
   #お気に入り
   has_many :favorites

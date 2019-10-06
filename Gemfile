@@ -61,3 +61,5 @@ gem 'carrierwave'
 
 #画像サイズ加工
 gem 'rmagick'
+
+gem 'pry-byebug', group: :development

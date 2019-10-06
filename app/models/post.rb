@@ -10,4 +10,7 @@ class Post < ApplicationRecord
   #お気に入り
   has_many :favorites
   has_many :users, through: :favorites, dependent: :destroy
+  
+  #コメント
+  has_many :messages
 end
