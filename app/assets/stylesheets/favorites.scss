@@ -4,6 +4,8 @@
 
 .btn-stitch {
   display: inline-block;
+  
+
   padding: 0.5em 1em;
   text-decoration: none;
   background: #668ad8;
@@ -11,14 +13,18 @@
   border-radius: 4px;
   box-shadow: 0px 0px 0px 5px #668ad8;
   border: dashed 1px #FFF;
+  cursor: pointer;
 }
 
 .btn-stitch2:hover {
   border: dotted 1px #FFF;
+  
 }
 
 .btn-stitch2 {
   display: inline-block;
+  
+
   padding: 0.5em 1em;
   text-decoration: none;
   background: #AAAAAA;
@@ -26,9 +32,9 @@
   border-radius: 4px;
   box-shadow: 0px 0px 0px 5px #AAAAAA;
   border: dashed 1px #FFF;
+  cursor: pointer;
 }
 
 .btn-stitch:hover {
   border: dotted 1px #FFF;
 }
-

@@ -2,6 +2,12 @@ class PostsController < ApplicationController
   before_action :require_user_logged_in
   before_action :correct_user, only: [:destroy]
 
+  def show
+    @post = Post.find_by(id: params[:id])
+    @user = @post.user
+    @count_favorites = Favorite.where(post_id: @post.id).count
+  end
+  
   def new
     @post = Post.new
   end
