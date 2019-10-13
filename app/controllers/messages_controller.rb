@@ -8,7 +8,7 @@ class MessagesController < ApplicationController
       flash[:success] = 'コメントしました。'
       redirect_back(fallback_location: root_path)
     else
-      flash.now[:danger] = 'コメントに失敗しました。'
+      flash[:danger] = 'コメントに失敗しました。'
       redirect_back(fallback_location: root_path)
     end
   end

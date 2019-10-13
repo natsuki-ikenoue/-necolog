@@ -24,6 +24,7 @@
     </div>
     <div class="mt-3 ml-4">
       <%= form_with(model: post.messages.build, local: true) do |f| %>
+        <%= render 'layouts/error_messages', model: f.object %>
         <%= f.hidden_field :post_id %>
         <%= f.text_field :content %>
         <%= f.submit 'コメント' , class: 'btn-comment' %>
