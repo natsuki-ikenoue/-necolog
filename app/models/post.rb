@@ -12,5 +12,5 @@ class Post < ApplicationRecord
   has_many :users, through: :favorites, dependent: :destroy
   
   #コメント
-  has_many :messages
+  has_many :messages, dependent: :destroy
 end

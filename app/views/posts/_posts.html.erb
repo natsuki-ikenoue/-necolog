@@ -2,9 +2,9 @@
   <section class="card ml-4 mb-4 ">
     <div class="card-header">
       <% if post.user.image? %>
-        <%= image_tag post.user.image.url, class:"mr-2 rounded-circle", size: '50x50' %>
+        <%= image_tag post.user.image.url, class:"usericon" %>
       <% else %>
-          <%= image_tag "noimage.png", class:"mr-2", size: '50x50' %>
+          <%= image_tag "noimage.png", class:"usericon" %>
       <% end %>
       <%= link_to post.user.name, user_path(post.user), class:"mr-4"%>
       <%= post.created_at.strftime("%Y-%m-%d %H:%M") %>
@@ -31,7 +31,15 @@
       <ul>
         <% post.messages.each do |message| %>
           <% if message.content.present? %>
-            <li><%= message.content %></li>
+            <li><%= link_to message.user.name, message.user, class: 'username' %>
+                <%= message.content %>
+              <% if current_user == message.user %>
+                <%= link_to message, method: :delete, data: { confirm: "本当に削除してよろしいですか？" }, class: 'btn4' do %>
+                  <i class="fas fa-trash"></i>
+                <% end %>
+                
+              <% end %>
+            </li>
           <% end %>
         <% end %>
       </ul>

@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-sm-3">
       <% if @user.image? %>
-        <%= image_tag @user.image.url, class:"mr-2 rounded-circle",size:"200x200" %> 
+        <%= image_tag @user.image.url, class:'userimage' %> 
       <% else %>
         <%= image_tag "noimage.png", class:"mr-2", size:"200x200"%>
       <% end %>
