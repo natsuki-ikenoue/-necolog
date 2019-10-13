@@ -5,8 +5,10 @@ class MessagesController < ApplicationController
     @message = Message.new(message_params)
     @message.user_id = current_user.id
     if @message.save
+      flash[:success] = 'コメントしました。'
       redirect_back(fallback_location: root_path)
     else
+      flash.now[:danger] = 'コメントに失敗しました。'
       redirect_back(fallback_location: root_path)
     end
   end
